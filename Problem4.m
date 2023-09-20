@@ -1,5 +1,8 @@
-epsilon_0 = 8.854187817e-12; 
+% Problem 4: Electric Force of Multiple Point Charges (Random) (2D)
+% Draw the electric force of a equilateral triangle of charges with many point charges
 
+% Setup Constants
+epsilon_0 = 8.854187817e-12; 
 n = 3;
 a = rand(1, n);
 b = rand(1, n);
@@ -8,6 +11,7 @@ fy = zeros(n);
 x = zeros(n);
 y = zeros(n);
 
+% Calculate Electric Force
 for i = 1:n
     q = 1e-9;
     for j = 1:n
@@ -24,7 +28,7 @@ for i = 1:n
     end
 end
 
-
+% Quiver Plot Electric Force
 quiver(x,y, fx, fy, AutoScaleFactor=5);
 title('Electric Force of Multiple Point Charges(Random) (2D)');
 xlabel('X');
